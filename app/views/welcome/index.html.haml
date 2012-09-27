@@ -1,0 +1,21 @@
+%div.row
+  %div.span8
+    %p.well
+      Hello
+  %div.span4
+    %p.alert
+      %a.close(data-dismiss="alert" href="#")
+        :plain
+          &times;
+      %a.btn(href="#myModal" role="button" data-toggle="modal" data-target="#myModal")
+        <i class="icon-plus-sign"></i> Launch demo modal
+  %div#myModal.modal.hide.fade
+    %div.modal-header
+      %button.close(type="button" data-dismiss="modal" aria-hidden="true")
+        :plain
+          &times;
+      %h3 Modal header
+    %div.modal-body
+      %p One fine body…
+    %div.modal-footer
+      %a.btn(href="#" data-dismiss="modal")Close

@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Bootstrap
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %div.container
+      %div.navbar.navbar-inverse
+        %div.navbar-inner
+          %a.brand(href="#")Title
+          %ul.nav
+            %li.active
+              %a(href="#")Home
+            %ul.nav.hidden-phone
+              = render 'layouts/menu_links'
+            %li.dropdown.visible-phone
+              %a.dropdown-toggle(href="#" data-toggle="dropdown")Phone Mode<b class="caret"></b>
+              %ul.dropdown-menu
+                = render 'layouts/menu_links'
+          %form.navbar-search.pull-right
+            %input.search-query(type="text" placeholder="Search")
+      = yield
